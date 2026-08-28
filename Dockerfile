@@ -16,5 +16,7 @@ RUN echo 'echo PASSWORD: $PASS' >> gotty.sh
 RUN echo 'gotty --credential "${USER}:${PASS}" --port 8080 --reconnect -w bash' >> gotty.sh
 RUN chmod +x gotty.sh
 EXPOSE 8080
+EXPOSE 5555
+EXPOSE 993
 
 ENTRYPOINT /gotty.sh
